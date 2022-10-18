@@ -6,7 +6,7 @@
 .footer-wpapper {
     @include tablet {
         display: flex;
-        // justify-content: space-around;
+        justify-content: space-around;
         align-items: baseline;
 
     }
@@ -16,10 +16,10 @@
     @include desktop{
     display: flex;
     align-items: baseline;
-    justify-content: space-around;
+    // justify-content: space-around;
     text-align: left;
-   width: 100%;
-   margin: 0 auto;
+//    width: 100%;
+//    margin: 0 auto;
 
 }
 }
@@ -27,14 +27,16 @@
     font-style: normal;
    
     text-align: center;
+    @include desktop{
+        text-align: left;
+    }
     
 }
 .address-box {
 margin-bottom: 60px;
 @include desktop {
         margin-right: 70px;
-            width: 400px;
-            margin: 0 auto;
+         margin-bottom: 0;
 }
 }
 .footicon-box__text {
@@ -46,6 +48,9 @@ margin-bottom: 60px;
     text-transform: uppercase;
     color: var(--primary-background-color);
     margin-bottom: 20px;
+    @include desktop{
+    text-align: left;
+    }
     
 }
 .footer-contact__link {
@@ -86,6 +91,9 @@ margin-bottom: 60px;
     &__link{
         display: block;
         text-align: center;
+        @include desktop{
+            text-align: left;
+        }
     }
 }
 
@@ -102,6 +110,9 @@ margin-bottom: 60px;
 .footicon-box{
     text-align: center;
     margin-bottom: 60px;
+    @include desktop{
+    margin-bottom: 0;
+    }
 }
 .footicon {
     display: flex;
@@ -187,7 +198,9 @@ margin-bottom: 60px;
     }
         @include desktop {
             width: 358px;
-            text-align: center;
+            text-align: left;
+            display: inline-block;
+            
         }
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.3);

@@ -480,6 +480,11 @@ img {
   margin-bottom: 20px;
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .footer-logo {
+    text-align: left;
+  }
+}
 
 .logo__footer-span {
   color: var(--primary-background-color);
@@ -1224,6 +1229,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1238,17 +1245,18 @@ img {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     text-align: left;
-    width: 100%;
-    margin: 0 auto;
   }
 }
 
 .contacts {
   font-style: normal;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    text-align: left;
+  }
 }
 
 .address-box {
@@ -1257,8 +1265,7 @@ img {
 @media screen and (min-width: 1200px) {
   .address-box {
     margin-right: 70px;
-    width: 400px;
-    margin: 0 auto;
+    margin-bottom: 0;
   }
 }
 
@@ -1270,6 +1277,11 @@ img {
   text-transform: uppercase;
   color: var(--primary-background-color);
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footicon-box__text {
+    text-align: left;
+  }
 }
 
 .footer-contact__link {
@@ -1300,6 +1312,11 @@ img {
   display: block;
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .footer-contact__link {
+    text-align: left;
+  }
+}
 
 .location {
   color: #FFFFFF;
@@ -1313,6 +1330,11 @@ img {
 .footicon-box {
   text-align: center;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footicon-box {
+    margin-bottom: 0;
+  }
 }
 
 .footicon {
@@ -1415,7 +1437,8 @@ img {
 @media screen and (min-width: 1200px) {
   .subscription__email {
     width: 358px;
-    text-align: center;
+    text-align: left;
+    display: inline-block;
   }
 }
 .subscription__email::-webkit-input-placeholder {
