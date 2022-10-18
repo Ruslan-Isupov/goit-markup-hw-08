@@ -6,7 +6,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: #C4C4C4;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/image/heroimage/header-mobile@1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/heroimage/header-mobile@1x.jpg);
     // url(../image/heroimge/heading.jpg);
     background-size: cover;
    
@@ -17,17 +17,17 @@
     padding-bottom: 118px;
     @include retina{
         background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(./image/heroimage/header-mobile@2x.jpg) ;
+            url(../image/heroimage/header-mobile@2x.jpg) ;
     }
 
  @include tablet{
     height: 400px;
     background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(./image/heroimage/header-tablet@1x.jpg);
+            url(../image/heroimage/header-tablet@1x.jpg);
     
             @include retina{
         background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(./image/heroimage/header-tablet@2x.jpg);
+                url(../image/heroimage/header-tablet@2x.jpg);
     }
  }
  @include desktop {
@@ -36,10 +36,10 @@
 
     height: 600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(./image/heroimage/header-desktop@1x.jpg);
+            url(../image/heroimage/header-desktop@1x.jpg);
      @include retina {
          background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-             url(./image/heroimage/header-desktop@2x.jpg);
+             url(../image/heroimage/header-desktop@2x.jpg);
      }
  }
 }
