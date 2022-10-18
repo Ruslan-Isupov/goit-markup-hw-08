@@ -1,0 +1,133 @@
+@media screen and(max-width:767px){
+.mobile-header{
+    display: flex;
+    justify-content:space-between;
+    padding:16px 15px;
+    align-items: center;
+}
+}
+.menu-container{
+    display: flex;
+    align-items: center;
+}
+
+    .mobile-header__btn {
+    position: absolute;
+    right:15px;
+    top: 10px;
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    
+&.js-close-menu:hover,
+&.js-close-menu:focus {
+     fill:var(--accent-color);
+    }
+    @include tablet{
+        display: none;
+    }
+}
+
+
+.mobile-icon__close {
+    display: none;
+}
+
+
+.nav-box.is-open .mobile-icon__close{
+
+    display: block;
+}
+.nav-box.is-open .mobile-icon__menu {
+    display: none;
+}
+.nav-box .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+}
+
+
+
+.nav-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    @media screen and(max-width:767px){
+        display: block;
+    align-items: unset;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    
+    z-index: 3;
+   
+    overflow-y: scroll;
+    transform:translateX(100%) ;
+    background-color:#fff;
+    padding: 48px 40px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    // padding-bottom: 48px;
+    
+}
+}
+.nav-box.is-open {
+    transform: translateX(0);
+    
+}
+
+.mobile-networks{
+    display: flex;
+    
+}
+.mobile-networks:not(:last-child){
+    padding:0 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+@media screen and (max-width:767px) {
+.mobile-networks {
+        margin-top: 64px;
+
+    }
+}
+
+.mobile-networks__link{
+display: block;
+
+font-size: 18px;
+font-weight: 500;
+line-height: 1.22;
+letter-spacing: 0.02em;
+text-align: left;
+color:var(--accent-color);
+
+&:hover{
+    color: var(--accent-btn);
+}
+// &:not(:last-child){
+//     padding: 0 10px;
+//     border-right: 1px solid rgba(33, 33, 33, 0.2);
+// }
+@include tablet{
+    display: none;
+}
+}
+.mobile-networks__link{
+    padding:0 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}

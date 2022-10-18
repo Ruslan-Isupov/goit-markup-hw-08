@@ -1,0 +1,133 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.portfolio-box {
+    padding: 20px 24px;
+    border-bottom: 1px solid #ECECEC;
+    border-left: 1px solid #ECECEC;
+    ;
+    border-right: 1px solid #ECECEC;
+    ;
+
+}
+.portfolio-box__title {
+    color: var(--primary-text-color);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+
+.portfolio-box__text {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+}
+
+
+
+.filter__button {
+    display: block;
+    font-family: inherit;
+    font-weight: $font-weight-header;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+    background-color: #F5F4FA;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    padding: 6px 22px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+        &:focus {
+            color: var(--primary-background-color);
+            background-color: var(--accent-color);
+            box-shadow: 0px 2px 2px 0px #0000001F, 0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001A;
+        }
+}
+
+.filter__item+.filter__item {
+    margin-left: 8px;
+}
+
+
+
+
+
+.portfolio__link {
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+&:hover,
+&:focus {
+    box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000F, 0px 1px 1px 0px #0000001F;
+    outline: none;
+}
+&:hover ::before {
+    transform: translateY(0);
+}
+
+&:focus ::before {
+    transform: translateY(0);
+
+}
+&:hover .overlay__text {
+    opacity: 1;
+}
+
+&:focus .overlay__text {
+    opacity: 1;
+}
+}
+.portfolio-goods {
+    position: relative;
+    overflow: hidden;
+}
+.overlay{
+
+
+
+&::before {
+
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(101%);
+    background-color: rgba(33, 150, 243, 0.9);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+}
+
+.overlay__text {
+
+
+    padding: 64px 24px 0 24px;
+    position: absolute;
+    color: var(--primary-background-color);
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    text-align: left;
+    vertical-align: top;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+

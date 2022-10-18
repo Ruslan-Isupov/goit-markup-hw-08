@@ -1,0 +1,261 @@
+
+.backdrop {
+    // For telephone
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 93px 15px;
+    overflow-y:scroll ;
+    // padding: 0 15px;
+    // padding-top:93px;
+    @include tablet{
+width: 100vw;
+height: 100vh;
+overflow-y: none;
+    }
+}
+
+.modal {
+    position: relative;
+    
+    left: 0;
+    top: 0;
+
+   
+    width: 450px;
+    height: 609px;
+    
+
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F;
+    padding: 40px ;
+    @include tablet{
+left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+    @include desktop{
+        width: 528px;
+        height: 581px;
+    }
+}
+
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+}
+
+.modal__icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__text {
+    font-size: 20px;
+        font-weight: $font-weight-primary;
+        line-height: 1,5;
+        letter-spacing: 0.03em;
+        text-align: center;
+        max-width: 370px;
+        margin-bottom: 12px;
+        @include desktop{
+           
+   
+    line-height: 1.15;
+    max-width: 448px;
+    margin-bottom: 12px;
+        }
+    
+
+
+}
+.form-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    :focus-within .input-box__icon {
+            fill: var(--accent-color);
+        }
+}
+
+.form-box__label {
+
+    font-weight: $font-weight-secondary;
+    font-size: 12px;
+    line-height: 1.17;
+
+
+    letter-spacing: 0.01em;
+
+    color: #757575;
+}
+
+.input-box {
+    position: relative;
+    margin-top: 4px;
+
+}
+.input-box__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-box__style {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    cursor: pointer;
+
+
+
+&:hover,
+&:focus {
+    border: 1px solid var(--accent-color);
+}
+}
+.input-box {
+&:hover .input-box__icon {
+    fill: var(--accent-color);
+}
+}
+
+
+
+
+
+.area-box {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.area-box__label {
+    font-weight:$font-weight-secondary;
+    font-size: 12px;
+    line-height: 1.17;
+
+
+    letter-spacing: 0.01em;
+
+    color: #757575;
+}
+
+.area-box__comment {
+    resize: none;
+
+    height: 120px;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+
+&:hover,
+&:focus {
+    border: 1px solid var(--accent-color);
+}
+
+&::placeholder {
+
+    font-weight: $font-weight-secondary;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+}
+
+.checkbox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;    
+}
+
+
+.checkbox__form {
+   
+    position: absolute;
+    width: 1px;
+    height: 1px;
+
+    // margin: 1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+
+
+&:checked+.checkbox__icon {
+    border-color: rgba(33, 150, 243, 1);
+    ;
+    background-color: var(--accent-color);
+    background-image: url(../image/icon\ check\ -good.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
+}
+.checkbox__text {
+    
+    
+        font-size: 12px;
+        font-weight: $font-weight-secondary;
+        line-height: 14px;
+        letter-spacing: 0.03em;
+        text-align: left;
+        color: #757575;
+        margin-left: 8px;
+        @include desktop{
+    font-size: 14px;
+    line-height: 1.71;
+    
+        }
+}
+
+
+.checkbox__sel {
+    color: var(--accent-color);
+
+}
+
+
+.checkbox__icon {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    // margin-right:8px;
+    
+        @include desktop{
+           left: 7px;
+        }
+    }

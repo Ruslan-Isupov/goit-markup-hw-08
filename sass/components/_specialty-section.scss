@@ -1,0 +1,57 @@
+.specialty-box{
+    
+display: none;
+@include desktop{
+    display: block;
+}
+        
+}
+.specialty {
+    display: flex;
+    margin-top:50px;
+
+}
+.specialty__title {
+
+min-width: 366px;
+
+}
+
+
+
+.specialty__item+.specialty__item {
+    margin-left: 30px;
+}
+.specialty-wrap {
+  
+    position: relative;
+}
+
+.specialty-wrap__img {
+    width: 100%;
+    height: 100%;
+
+}
+.label-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    height: 70px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+
+.label-box__text {
+
+    font-size: 14px;
+    font-weight: $font-weight-primary;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-background-color);
+}
