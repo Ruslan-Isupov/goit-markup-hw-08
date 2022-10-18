@@ -3,12 +3,18 @@
 display: none;
 @include desktop{
     display: block;
+    @include desktop {
+            padding-bottom: 94px;
+        }
+    
 }
         
 }
 .specialty {
     display: flex;
     margin-top:50px;
+    
+      
 
 }
 .specialty__title {
@@ -54,4 +60,5 @@ min-width: 366px;
     text-align: center;
     text-transform: uppercase;
     color: var(--primary-background-color);
+   
 }
