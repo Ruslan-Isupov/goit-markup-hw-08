@@ -1748,9 +1748,14 @@ img {
   display: flex;
 }
 
-.mobile-networks:not(:last-child) {
+.mobile-networks__item {
   padding: 0 10px;
+}
+.mobile-networks__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mobile-networks__item:first-child {
+  padding-left: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1767,16 +1772,11 @@ img {
   text-align: left;
   color: var(--accent-color);
 }
-.mobile-networks__link:hover {
+.mobile-networks__link:hover, .mobile-networks__link:focus {
   color: var(--accent-btn);
 }
 @media screen and (min-width: 768px) {
   .mobile-networks__link {
     display: none;
   }
-}
-
-.mobile-networks__link {
-  padding: 0 10px;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }/*# sourceMappingURL=main.css.map */
