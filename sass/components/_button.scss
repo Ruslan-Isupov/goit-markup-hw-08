@@ -82,6 +82,9 @@
 
     padding: 10px 52px;
     margin: 0 auto;
+    @media screen and(max-width:479px) {
+       padding: 5px 32px; 
+    }
 
 
     background-color: var(--accent-color);
