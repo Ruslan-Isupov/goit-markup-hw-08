@@ -12,18 +12,25 @@ body {
     color: var(--secondary-text-color);
 }
 
-.nav__list .current {
-    color: var(--accent-color);
+
+
+.current {
+@media screen and(max-width:767px) {
+color: var(--accent-color)
+    }
 }
 
 .nav__item {
     position: relative;
 }
+// .current{
+    
+//     }
 
 .current{
 &::after {
-
-
+display: none;
+@media screen and(min-width:768px){
     border-radius: 2px;
     content: '';
     position: absolute;
@@ -32,6 +39,7 @@ body {
     left: 0;
     bottom: 0;
     background-color: var(--accent-color);
+}
 }
 }
 
